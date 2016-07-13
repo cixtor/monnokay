@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Monnokay Color Scheme</title>
+	<style type="text/css">
+	body                   {background: #00303E; color: #F8F8F2}
+	/* Options for the global scope */
+	.container             {font-family: Menlo, Monospace, serif; font-size: 12px; white-space: pre-wrap; padding: 0 20px}
+	.invisibles            {color: #00617D}
+	.lineHighlight         {background: #00617D}
+	.selection             {background: #00617D; border: 1px solid #0096C1}
+	.findHighlight         {background: #FF5EFB; color: #000000}
+	/* Options for the global scope */
+	.comment               {color: #888888}
+	.string                {color: #F3E87E}
+	.number                {color: #FF5EFB}
+	.built_in_constant     {color: #AE81FF}
+	.user_defined_constant {color: #AE81FF}
+	.variable              {color: #678CB1}
+	.keyword               {color: #EC007C}
+	.storage               {color: #FF5EFB; font-style: italic;}
+	.storage_type          {color: #6ED293; font-style: italic;}
+	.class_name            {color: #A6E22E}
+	.inherited_class       {color: #A6E22E; font-style: italic;}
+	.function_name         {color: #66D9EF}
+	.function_name_custom  {color: #66D9EF}
+	.function_argument     {color: #FD971F}
+	/* HTML and JavaScript related */
+	.tag_name              {color: #EC007C}
+	.tag_attribute         {color: #A6E22E}
+	.tag_attribute_id      {color: #FD971F}
+	.library_function      {color: #66D9EF}
+	.library_constant      {color: #66D9EF}
+	.library_class_type    {color: #66D9EF; font-style: italic;}
+	.library_variable      {color: #FFFFFF}
+	.deprecated            {background: #AE81FF; color: #F8F8F0}
+	.invalid               {background: #EC7600; color: #F8F8F0}
+	.property_name         {color: #66D9EF; font-style: italic;}
+	.property_value        {color: #6688EF}
+	</style>
+</head>
+<body>
+
+<div class="container">
+&lt;?php
+
+<span class="comment">/**
+ * Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ * tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ * quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ * consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ * cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ * proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ *
+ * <span class="keyword">@package</span>   Corporate Package
+ * <span class="keyword">@author</span>    John Smith &lt;john@smith.com&gt;
+ * <span class="keyword">@copyright</span> Copyright (C) 1997 Company Inc.
+ * <span class="keyword">@link</span>      https://example.com/
+ * <span class="keyword">@since</span>     Version 0.1
+ */</span>
+
+<span class="comment">/* --------------- */</span>                        <span class="comment">// Comment</span>
+<span class="variable">$var</span> = <span class="string">"abcabcabcab"</span>;                        <span class="comment">// String</span>
+<span class="variable">$var</span> = <span class="number">1234567890000</span>;                        <span class="comment">// Number</span>
+<span class="variable">$var</span> = <span class="built_in_constant">true</span> <span class="keyword">&&</span> <span class="built_in_constant">false</span>;                        <span class="comment">// Built-in constant</span>
+<span class="variable">$var</span> = <span class="user_defined_constant">FOOBAR_FOOBAR</span>;                        <span class="comment">// User-defined constant</span>
+<span class="variable">$var</span> = <span class="variable">$foobar_lorem</span>;                        <span class="comment">// Variable</span>
+<span class="variable">$var</span> = <span class="keyword">return</span> <span class="user_defined_constant">FOOBAR</span>;                        <span class="comment">// Keyword              (return)</span>
+<span class="storage">public</span> <span class="variable">$var</span> = <span class="user_defined_constant">FOOBAR</span>;                        <span class="comment">// Storage              (public)</span>
+<span class="storage_type">var</span> <span class="variable">$var</span> = <span class="user_defined_constant">FOOBAR</span>;                           <span class="comment">// Storage type         (var)</span>
+<span class="storage_type">class</span> <span class="class_name">Foobar</span> {}                              <span class="comment">// Class name           (Foobar)</span>
+<span class="storage_type">class</span> <span class="class_name">Foobar</span> <span class="storage">extends</span> <span class="inherited_class">Lorem</span> {}                <span class="comment">// Inherited class      (Lorem)</span>
+<span class="storage_type">function</span> <span class="function_name">foobar</span>() {}                         <span class="comment">// Function name        (foobar)</span>
+<span class="storage">private</span> <span class="storage_type">function</span> <span class="function_name">foobar</span>(<span class="function_argument">$arg</span> = <span class="number">12</span>) {}        <span class="comment">// Function argument    ($arg)</span>
+<span class="variable">$var</span> = <span class="library_function">str_replace</span>(<span class="string">"hello"</span>, <span class="number">12345</span>, <span class="built_in_constant">null</span>);    <span class="comment">// Library Function     (str_replace)</span>
+<span class="variable">$var</span> = <span class="function_name_custom">this_is_custom</span>(<span class="string">"hello"</span>, <span class="number">12345</span>, <span class="built_in_constant">null</span>); <span class="comment">// Function Name Custom (this_is_custom)</span>
+<span class="deprecated"> &&||&& >>> &&||&& </span>                          <span class="comment">// Invalid deprecated</span>
+<span class="invalid"> &&||&& >>> &&||&& </span>                          <span class="comment">// Invalid</span>
+?&gt;
+&lt;<span class="tag_name">title</span>&gt;Datashat Remix&lt;/<span class="tag_name">title</span>&gt;                <span class="comment">&lt;!-- Tag name --&gt;</span>
+&lt;<span class="tag_name">body</span> <span class="tag_attribute">attr</span>=<span class="string">"foobar"</span>&gt;&lt;/<span class="tag_name">body</span>&gt;                  <span class="comment">&lt;!-- Tag attribute --&gt;</span>
+&lt;<span class="tag_name">script</span>&gt;xml.documentElement.length&lt;/<span class="tag_name">script</span>&gt;  <span class="comment">&lt;!-- Library constant --&gt;</span>
+&lt;<span class="tag_name">script</span>&gt;Sound.prototype.play&lt;/<span class="tag_name">script</span>&gt;        <span class="comment">&lt;!-- Library class/type --&gt;</span>
+&lt;<span class="tag_name">script</span>&gt;Sound.this_is_a_variable&lt;/<span class="tag_name">script</span>&gt;    <span class="comment">&lt;!-- Library variable --&gt;</span>
+&lt;<span class="tag_name">style</span> <span class="tag_attribute">type</span>=<span class="string">"text/css"</span>&gt;
+<span class="tag_name">body</span> {
+    <span class="property_name">font-family</span>: <span class="property_value">Arial</span>, <span class="property_value">Helvetica</span>, <span class="property_value">sans-serif</span>;
+    <span class="property_name">font-size</span>: <span class="number">12</span><span class="keyword">px</span>;
+    <span class="property_name">color</span>: <span class="built_in_constant">#efefef</span>;
+}
+<span class="tag_attribute_id">#container</span> {
+    <span class="property_name">width</span>: <span class="number">600</span><span class="keyword">px</span>;
+    <span class="property_name">margin</span>: <span class="number">0</span> <span class="property_value">auto</span>;
+    <span class="property_name">border</span>: <span class="number">1</span><span class="keyword">px</span> <span class="property_value">solid</span> <span class="built_in_constant">#000</span>;
+}
+<span class="tag_attribute">.special</span> {
+    <span class="property_name">width</span>: <span class="property_value">initial</span>;
+    <span class="property_name">background</span>: <span class="built_in_constant">#ff0000</span>;
+    <span class="property_name">border-radius</span>: <span class="number">50</span><span class="keyword">%</span>;
+    <span class="property_name">height</span>: <span class="number">50</span><span class="keyword">px</span>;
+    <span class="property_name">width</span>: <span class="number">50</span><span class="keyword">px</span>;
+}
+&lt;/<span class="keyword">style</span>&gt;
+</div>
+
+</body>
+</html>
