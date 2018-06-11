@@ -1,989 +1,627 @@
 {
-	"theme": "Monnokay",
-	"author_name": "cixtor",
-	"description": "textmate color scheme",
-	"author_link": "https://github.com/cixtor",
-	"project_link": "https://github.com/cixtor/monnokay",
-	"options": {
-		"activeGuide": "#9d550fb0",
+	"name": "Monnokay",
+	"author": "cixtor",
+	"origin": "https://github.com/cixtor/monnokay",
+	"globals": {
+		"active_guide": "#9d550fb0",
 		"background": "#282c34",
-		"bracketContentsForeground": "#f8f8f2a5",
-		"bracketContentsOptions": "underline",
-		"bracketsForeground": "#f8f8f2a5",
-		"bracketsOptions": "underline",
+		"bracket_contents_foreground": "#f8f8f2a5",
+		"bracket_contents_options": "underline",
+		"brackets_foreground": "#f8f8f2a5",
+		"brackets_options": "underline",
 		"caret": "#518bff",
-		"findHighlight": "#ffe792",
-		"findHighlightForeground": "#000000",
+		"find_highlight": "#ffe792",
+		"find_highlight_foreground": "#000000",
 		"foreground": "#abb2bf",
 		"invisibles": "#00617d",
-		"lineHighlight": "#374152",
+		"line_highlight": "#374152",
 		"misspelling": "#f92672",
 		"selection": "#3e4451",
-		"selectionBorder": "#3e4451",
-		"tagsOptions": "stippled_underline"
+		"selection_border": "#3e4451",
+		"tags_options": "stippled_underline"
 	},
-	"settings": [
+	"rules": [
 		{
-			"scope": "entity.name",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": ""
-		},
-		{
-			"scope": "entity.name.section",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": ""
-		},
-		{
-			"scope": "variable",
-			"background": "",
-			"foreground": "#678cb1",
-			"fontStyle": "",
-			"name": ""
-		},
-		{
-			"scope": "support",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": ""
-		},
-		{
+			"name": "String",
 			"scope": "string",
-			"background": "",
-			"foreground": "#98c379",
-			"fontStyle": "",
-			"name": "String"
+			"foreground": "#98c379"
 		},
 		{
+			"name": "Comment",
 			"scope": "comment",
-			"background": "",
 			"foreground": "#5c6370",
-			"fontStyle": "italic",
-			"name": "Comment"
+			"font_style": "italic"
 		},
 		{
-			"scope": "comment.line",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Single comments"
+			"name": "Single comments",
+			"scope": "comment.line"
 		},
 		{
-			"scope": "comment.block",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Multi-line comments"
+			"name": "Multi-line comments",
+			"scope": "comment.block"
 		},
 		{
-			"scope": "comment.block.documentation",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Multi-line comments used as documentation, such as Javadoc or PhpDoc"
+			"name": "Multi-line comments used as documentation, such as Javadoc or PhpDoc",
+			"scope": "comment.block.documentation"
 		},
 		{
-			"scope": "punctuation.definition.comment",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Symbols that delineate a comment, e.g. // or /*"
+			"name": "Symbols that delineate a comment, e.g. // or /*",
+			"scope": "punctuation.definition.comment"
 		},
 		{
-			"scope": "meta.toc-list",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Comments with special syntax that denote a section of code"
+			"name": "Comments with special syntax that denote a section of code",
+			"scope": "meta.toc-list"
 		},
 		{
+			"name": "Diff header",
 			"scope": "meta.diff",
-			"background": "",
-			"foreground": "#75715E",
-			"fontStyle": "",
-			"name": "Diff header"
+			"foreground": "#75715E"
 		},
 		{
+			"name": "Diff header",
 			"scope": "meta.diff.header",
-			"background": "",
-			"foreground": "#75715E",
-			"fontStyle": "",
-			"name": "Diff header"
+			"foreground": "#75715E"
 		},
 		{
-			"scope": "constant",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": ""
-		},
-		{
+			"name": "Numeric literal",
 			"scope": "constant.numeric",
-			"background": "",
-			"foreground": "#e0bc14",
-			"fontStyle": "",
-			"name": "Numeric literal"
+			"foreground": "#e0bc14"
 		},
 		{
-			"scope": "constant.numeric.integer",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Numeric literal for integers"
+			"name": "Numeric literal for integers",
+			"scope": "constant.numeric.integer"
 		},
 		{
-			"scope": "constant.numeric.float",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Numeric literal for floating points"
+			"name": "Numeric literal for floating points",
+			"scope": "constant.numeric.float"
 		},
 		{
-			"scope": "constant.numeric.octal",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Numeric literal in octal representation"
+			"name": "Numeric literal in octal representation",
+			"scope": "constant.numeric.octal"
 		},
 		{
-			"scope": "constant.numeric.hex",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Numeric literal in hexadecimal representation"
+			"name": "Numeric literal in hexadecimal representation",
+			"scope": "constant.numeric.hex"
 		},
 		{
+			"name": "Constants that are built into the language, such as booleans and null values",
 			"scope": "constant.language",
-			"background": "",
-			"foreground": "#db6a73",
-			"fontStyle": "",
-			"name": "Constants that are built into the language, such as booleans and null values"
+			"foreground": "#db6a73"
 		},
 		{
+			"name": "User-defined constant",
 			"scope": "constant.character",
-			"background": "",
-			"foreground": "#AE81FF",
-			"fontStyle": "",
-			"name": "User-defined constant"
+			"foreground": "#AE81FF"
 		},
 		{
+			"name": "Character escapes in strings, e.g. \\n and \\x20",
 			"scope": "constant.character.escape",
-			"background": "",
 			"foreground": "#57b6c2",
-			"fontStyle": "bold",
-			"name": "Character escapes in strings, e.g. \\n and \\x20"
+			"font_style": "bold"
 		},
 		{
+			"name": "Formatting placeholders, such as those used for sprintf(), e.g. %s",
 			"scope": "constant.other.placeholder",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "bold",
-			"name": "Formatting placeholders, such as those used for sprintf(), e.g. %s"
+			"font_style": "bold"
 		},
 		{
+			"name": "Other language-specific constant values, such as symbols in Ruby",
 			"scope": "constant.other",
-			"background": "",
-			"foreground": "#d09965",
-			"fontStyle": "",
-			"name": "Other language-specific constant values, such as symbols in Ruby"
+			"foreground": "#d09965"
 		},
 		{
+			"name": "Class name",
 			"scope": "entity.name.class",
-			"background": "",
-			"foreground": "#e1bd7a",
-			"fontStyle": "",
-			"name": "Class name"
+			"foreground": "#e1bd7a"
 		},
 		{
-			"scope": "entity.name.struct",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Struct name"
+			"name": "Struct name",
+			"scope": "entity.name.struct"
 		},
 		{
-			"scope": "entity.name.enum",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Enum name"
+			"name": "Enum name",
+			"scope": "entity.name.enum"
 		},
 		{
-			"scope": "entity.name.union",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Union name"
+			"name": "Union name",
+			"scope": "entity.name.union"
 		},
 		{
-			"scope": "entity.name.trait",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Trait name"
+			"name": "Trait name",
+			"scope": "entity.name.trait"
 		},
 		{
-			"scope": "entity.name.interface",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Interface name"
+			"name": "Interface name",
+			"scope": "entity.name.interface"
 		},
 		{
+			"name": "Type name",
 			"scope": "entity.name.type",
-			"background": "",
-			"foreground": "#e1bd7a",
-			"fontStyle": "",
-			"name": "Type name"
+			"foreground": "#e1bd7a"
 		},
 		{
+			"name": "Class, interface and trait names listed as an inherited class or implemented interface/trait",
 			"scope": "entity.other.inherited-class",
-			"background": "",
-			"foreground": "#98c379",
-			"fontStyle": "",
-			"name": "Class, interface and trait names listed as an inherited class or implemented interface/trait"
+			"foreground": "#98c379"
 		},
 		{
+			"name": "Filename",
 			"scope": "entity.name.filename",
-			"background": "",
-			"foreground": "#E6DB74",
-			"fontStyle": "",
-			"name": "Filename"
+			"foreground": "#E6DB74"
 		},
 		{
+			"name": "Function names included in the symbol list and index",
 			"scope": "entity.name.function",
-			"background": "",
 			"foreground": "#61afef",
-			"fontStyle": "bold",
-			"name": "Function names included in the symbol list and index"
+			"font_style": "bold"
 		},
 		{
-			"scope": "entity.name.function.constructor",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Function names included in the symbol list and index"
+			"name": "Function names included in the symbol list and index",
+			"scope": "entity.name.function.constructor"
 		},
 		{
-			"scope": "entity.name.function.destructor",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Function names included in the symbol list and index"
+			"name": "Function names included in the symbol list and index",
+			"scope": "entity.name.function.destructor"
 		},
 		{
+			"name": "Namespaces, packages and modules use the following scope",
 			"scope": "entity.name.namespace",
-			"background": "",
 			"foreground": "#e0bc14",
-			"fontStyle": "bold",
-			"name": "Namespaces, packages and modules use the following scope"
+			"font_style": "bold"
 		},
 		{
+			"name": "Namespaces, packages and modules use the following scope",
 			"scope": "support.other.namespace",
-			"background": "",
-			"foreground": "#e0bc14",
-			"fontStyle": "",
-			"name": "Namespaces, packages and modules use the following scope"
+			"foreground": "#e0bc14"
 		},
 		{
-			"scope": "entity.name.constant",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Constants included in the symbol list and index"
+			"name": "Constants included in the symbol list and index",
+			"scope": "entity.name.constant"
 		},
 		{
+			"name": "Labels for goto-like constructs",
 			"scope": "entity.name.label",
-			"background": "",
 			"foreground": "#ff0000",
-			"fontStyle": "bold",
-			"name": "Labels for goto-like constructs"
+			"font_style": "bold"
 		},
 		{
-			"scope": "entity.name.section",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Heading names in markup languages, such as Markdown and Textile"
+			"name": "Heading names in markup languages, such as Markdown and Textile",
+			"scope": "entity.name.section"
 		},
 		{
+			"name": "HTML and XML tags should use the following scope",
 			"scope": "entity.name.tag",
-			"background": "",
-			"foreground": "#F92672",
-			"fontStyle": "",
-			"name": "HTML and XML tags should use the following scope"
+			"foreground": "#F92672"
 		},
 		{
+			"name": "HTML, CSS and XML use the following for tag attribute names",
 			"scope": "entity.other.attribute-name",
-			"background": "",
-			"foreground": "#A6E22E",
-			"fontStyle": "",
-			"name": "HTML, CSS and XML use the following for tag attribute names"
+			"foreground": "#A6E22E"
 		},
 		{
-			"scope": "invalid",
-			"background": "F92672",
-			"foreground": "#F8F8F0",
-			"fontStyle": "",
-			"name": ""
+			"name": "Elements that are illegal in a specific context",
+			"scope": "invalid.illegal"
 		},
 		{
-			"scope": "invalid.illegal",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Elements that are illegal in a specific context"
-		},
-		{
+			"name": "Deprecated elements",
 			"scope": "invalid.deprecated",
 			"background": "#AE81FF",
-			"foreground": "#F8F8F0",
-			"fontStyle": "",
-			"name": "Deprecated elements"
+			"foreground": "#F8F8F0"
 		},
 		{
-			"scope": "keyword.control",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Control keywords examples include if, try, end and while"
+			"name": "Control keywords examples include if, try, end and while",
+			"scope": "keyword.control"
 		},
 		{
-			"scope": "keyword.control.conditional",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Some syntaxes prefer to mark if and else with the conditional variant"
+			"name": "Some syntaxes prefer to mark if and else with the conditional variant",
+			"scope": "keyword.control.conditional"
 		},
 		{
-			"scope": "keyword.control.import",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "The import variant is often used in appropriate situations"
+			"name": "The import variant is often used in appropriate situations",
+			"scope": "keyword.control.import"
 		},
 		{
-			"scope": "punctuation.definition.keyword",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Keywords that contain punctuation, such as the @ symbol in CSS"
+			"name": "Keywords that contain punctuation, such as the @ symbol in CSS",
+			"scope": "punctuation.definition.keyword"
 		},
 		{
+			"name": "Keyword",
 			"scope": "keyword - (source.c keyword.operator | source.c++ keyword.operator | source.objc keyword.operator | source.objc++ keyword.operator), keyword.operator.word",
-			"background": "",
-			"foreground": "#c678dd",
-			"fontStyle": "",
-			"name": "Keyword"
+			"foreground": "#c678dd"
 		},
 		{
-			"scope": "keyword.control",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": ""
-		},
-		{
+			"name": "Symbols for general operations",
 			"scope": "keyword.operator",
-			"background": "",
-			"foreground": "#abb2bf",
-			"fontStyle": "",
-			"name": "Symbols for general operations"
+			"foreground": "#abb2bf"
 		},
 		{
+			"name": "Symbols for assignment operations",
 			"scope": "keyword.operator.assignment",
-			"background": "",
-			"foreground": "#abb2bf",
-			"fontStyle": "",
-			"name": "Symbols for assignment operations"
+			"foreground": "#abb2bf"
 		},
 		{
-			"scope": "keyword.operator.arithmetic",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Symbols for arithmetic operations"
+			"name": "Symbols for arithmetic operations",
+			"scope": "keyword.operator.arithmetic"
 		},
 		{
-			"scope": "keyword.operator.bitwise",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Symbols for bitwise operations"
+			"name": "Symbols for bitwise operations",
+			"scope": "keyword.operator.bitwise"
 		},
 		{
+			"name": "Symbols for logical operations",
 			"scope": "keyword.operator.logical",
-			"background": "",
-			"foreground": "#abb2bf",
-			"fontStyle": "",
-			"name": "Symbols for logical operations"
+			"foreground": "#abb2bf"
 		},
 		{
+			"name": "Symbols for logical operations",
 			"scope": "keyword.operator.comparison",
-			"background": "",
-			"foreground": "#abb2bf",
-			"fontStyle": "",
-			"name": "Symbols for logical operations"
+			"foreground": "#abb2bf"
 		},
 		{
-			"scope": "keyword.operator.word",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "When the operator is a word, such as and, or or not"
+			"name": "When the operator is a word, such as and, or or not",
+			"scope": "keyword.operator.word"
 		},
 		{
-			"scope": "keyword.other",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "All remaining non-operator keywords"
+			"name": "All remaining non-operator keywords",
+			"scope": "keyword.other"
 		},
 		{
+			"name": "PhpDoc keywords",
 			"scope": "keyword.other.phpdoc",
-			"background": "",
 			"foreground": "#7f7e80",
-			"fontStyle": "bold italic",
-			"name": "PhpDoc keywords"
+			"font_style": "bold italic"
 		},
 		{
+			"name": "Section headings for content, Markdown and Textile",
 			"scope": "markup.heading",
-			"background": "",
 			"foreground": "#ff9200",
-			"fontStyle": "bold",
-			"name": "Section headings for content, Markdown and Textile"
+			"font_style": "bold"
 		},
 		{
+			"name": "markup h1",
 			"scope": "markup.heading.1",
-			"background": "",
-			"foreground": "#fd9855",
-			"fontStyle": "",
-			"name": "markup h1"
+			"foreground": "#fd9855"
 		},
 		{
+			"name": "markup h2",
 			"scope": "markup.heading.2",
-			"background": "",
-			"foreground": "#fc8032",
-			"fontStyle": "",
-			"name": "markup h2"
+			"foreground": "#fc8032"
 		},
 		{
+			"name": "markup h3",
 			"scope": "markup.heading.3",
-			"background": "",
-			"foreground": "#fc5f32",
-			"fontStyle": "",
-			"name": "markup h3"
+			"foreground": "#fc5f32"
 		},
 		{
+			"name": "markup h4",
 			"scope": "markup.heading.4",
-			"background": "",
-			"foreground": "#fb4035",
-			"fontStyle": "",
-			"name": "markup h4"
+			"foreground": "#fb4035"
 		},
 		{
+			"name": "markup h5",
 			"scope": "markup.heading.5",
-			"background": "",
-			"foreground": "#9e2442",
-			"fontStyle": "",
-			"name": "markup h5"
+			"foreground": "#9e2442"
 		},
 		{
+			"name": "markup h6",
 			"scope": "markup.heading.6",
-			"background": "",
-			"foreground": "#360e2a",
-			"fontStyle": "",
-			"name": "markup h6"
+			"foreground": "#360e2a"
 		},
 		{
-			"scope": "markup.list.numbered",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Numbered list"
+			"name": "Numbered list",
+			"scope": "markup.list.numbered"
 		},
 		{
+			"name": "Markup bullets",
 			"scope": "markup.list.numbered.bullet",
-			"background": "",
 			"foreground": "#ae81ff",
-			"fontStyle": "bold",
-			"name": "Markup bullets"
+			"font_style": "bold"
 		},
 		{
-			"scope": "markup.list.unnumbered",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Unnumbered list"
+			"name": "Unnumbered list",
+			"scope": "markup.list.unnumbered"
 		},
 		{
+			"name": "markup bullets",
 			"scope": "markup.list.unnumbered.bullet",
-			"background": "",
 			"foreground": "#ae81ff",
-			"fontStyle": "bold",
-			"name": "markup bullets"
+			"font_style": "bold"
 		},
 		{
+			"name": "Basic bold text styling",
 			"scope": "markup.bold",
-			"background": "",
 			"foreground": "#c6d1e3",
-			"fontStyle": "bold",
-			"name": "Basic bold text styling"
+			"font_style": "bold"
 		},
 		{
+			"name": "Basic italic text styling",
 			"scope": "markup.italic",
-			"background": "",
 			"foreground": "#707780",
-			"fontStyle": "italic",
-			"name": "Basic italic text styling"
+			"font_style": "italic"
 		},
 		{
+			"name": "markup bold/italic",
 			"scope": "markup.italic markup.bold | markup.bold markup.italic",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "bold italic",
-			"name": "markup bold/italic"
+			"font_style": "bold italic"
 		},
 		{
-			"scope": "markup.underline",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Basic underline text styling"
+			"name": "Basic underline text styling",
+			"scope": "markup.underline"
 		},
 		{
+			"name": "Inserted content, such as with diff output",
 			"scope": "markup.inserted",
-			"background": "",
-			"foreground": "#a6e22e",
-			"fontStyle": "",
-			"name": "Inserted content, such as with diff output"
+			"foreground": "#a6e22e"
 		},
 		{
+			"name": "Changed content, such as with diff output",
 			"scope": "markup.changed",
-			"background": "",
-			"foreground": "#e6db74",
-			"fontStyle": "",
-			"name": "Changed content, such as with diff output"
+			"foreground": "#e6db74"
 		},
 		{
+			"name": "Deleted content, such as with diff output",
 			"scope": "markup.deleted",
-			"background": "",
-			"foreground": "#f92672",
-			"fontStyle": "",
-			"name": "Deleted content, such as with diff output"
+			"foreground": "#f92672"
 		},
 		{
+			"name": "Links",
 			"scope": "markup.underline.link",
-			"background": "",
-			"foreground": "#007582",
-			"fontStyle": "",
-			"name": "Links"
+			"foreground": "#007582"
 		},
 		{
+			"name": "Links",
 			"scope": "meta.link.inline.markdown",
-			"background": "",
-			"foreground": "#00adc0",
-			"fontStyle": "",
-			"name": "Links"
+			"foreground": "#00adc0"
 		},
 		{
+			"name": "Links",
 			"scope": "meta.link.inline.description.markdown",
-			"background": "",
 			"foreground": "#00adc0",
-			"fontStyle": "italic",
-			"name": "Links"
+			"font_style": "italic"
 		},
 		{
+			"name": "Links",
 			"scope": "meta.image.inline.markdown",
-			"background": "",
-			"foreground": "#00adc0",
-			"fontStyle": "",
-			"name": "Links"
+			"foreground": "#00adc0"
 		},
 		{
+			"name": "Links",
 			"scope": "meta.image.inline.description.markdown",
-			"background": "",
 			"foreground": "#00adc0",
-			"fontStyle": "italic",
-			"name": "Links"
+			"font_style": "italic"
 		},
 		{
-			"scope": "markup.quote",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Blockquotes and other quote styles"
+			"name": "Blockquotes and other quote styles",
+			"scope": "markup.quote"
 		},
 		{
+			"name": "Literal quoting, often used for code",
 			"scope": "markup.raw",
-			"background": "#F8F8F818",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Literal quoting, often used for code"
+			"background": "#F8F8F818"
 		},
 		{
-			"scope": "markup.raw.inline",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Inline literal quoting, often used for code"
+			"name": "Inline literal quoting, often used for code",
+			"scope": "markup.raw.inline"
 		},
 		{
-			"scope": "markup.raw.block",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Block literal quoting, often used for code"
+			"name": "Block literal quoting, often used for code",
+			"scope": "markup.raw.block"
 		},
 		{
+			"name": "markup punctuation",
 			"scope": "markup.raw punctuation.definition.raw",
-			"background": "",
-			"foreground": "#F8F8F8AA",
-			"fontStyle": "",
-			"name": "markup punctuation"
+			"foreground": "#F8F8F8AA"
 		},
 		{
-			"scope": "markup.other",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Other markup, including constructs such as footnotes and tables"
+			"name": "Other markup, including constructs such as footnotes and tables",
+			"scope": "markup.other"
 		},
 		{
+			"name": "markup blockquote",
 			"scope": "markup.quote punctuation.definition.blockquote",
-			"background": "",
-			"foreground": "#75715E",
-			"fontStyle": "",
-			"name": "markup blockquote"
+			"foreground": "#75715E"
 		},
 		{
-			"scope": "punctuation.separator",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Separators such as commas and colons"
+			"name": "Separators such as commas and colons",
+			"scope": "punctuation.separator"
 		},
 		{
-			"scope": "punctuation.terminator",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Semicolons or other statement terminators"
+			"name": "Semicolons or other statement terminators",
+			"scope": "punctuation.terminator"
 		},
 		{
-			"scope": "punctuation.separator.continuation",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Line-continuation characters, such as in Python and R"
+			"name": "Line-continuation characters, such as in Python and R",
+			"scope": "punctuation.separator.continuation"
 		},
 		{
-			"scope": "punctuation.accessor",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Member access, scope resolution, or similar constructs including the dot symbol, single-hyphen arrow and double-colon symbol"
+			"name": "Member access, scope resolution, or similar constructs including the dot symbol, single-hyphen arrow and double-colon symbol",
+			"scope": "punctuation.accessor"
 		},
 		{
+			"name": "Storage",
 			"scope": "storage",
-			"background": "",
-			"foreground": "#F92672",
-			"fontStyle": "",
-			"name": "Storage"
+			"foreground": "#F92672"
 		},
 		{
+			"name": "Types and definition/declaration keywords should use the following scope. Examples include int, bool, char, func, function, class and def",
 			"scope": "storage.type",
-			"background": "",
 			"foreground": "#c678dd",
-			"fontStyle": "italic",
-			"name": "Types and definition/declaration keywords should use the following scope. Examples include int, bool, char, func, function, class and def"
+			"font_style": "italic"
 		},
 		{
+			"name": "Keywords that affect the storage of a variable, function or data structure should use the following scope. Examples include static, inline, const, public and private",
 			"scope": "storage.modifier",
-			"background": "",
 			"foreground": "#ff0071",
-			"fontStyle": "italic",
-			"name": "Keywords that affect the storage of a variable, function or data structure should use the following scope. Examples include static, inline, const, public and private"
+			"font_style": "italic"
 		},
 		{
-			"scope": "string.quoted.single",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Basic strings between single quotes"
+			"name": "Basic strings between single quotes",
+			"scope": "string.quoted.single"
 		},
 		{
-			"scope": "string.quoted.double",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Basic strings between double quotes"
+			"name": "Basic strings between double quotes",
+			"scope": "string.quoted.double"
 		},
 		{
-			"scope": "string.quoted.triple",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Basic strings between triple quotes"
+			"name": "Basic strings between triple quotes",
+			"scope": "string.quoted.triple"
 		},
 		{
-			"scope": "string.quoted.other",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Strings that used unconventional quotes, such as lower-than and greater-than with C imports"
+			"name": "Strings that used unconventional quotes, such as lower-than and greater-than with C imports",
+			"scope": "string.quoted.other"
 		},
 		{
-			"scope": "punctuation.definition.string.begin",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Punctuation at the beginning of strings"
+			"name": "Punctuation at the beginning of strings",
+			"scope": "punctuation.definition.string.begin"
 		},
 		{
-			"scope": "punctuation.definition.string.end",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Punctuation at the end of strings"
+			"name": "Punctuation at the end of strings",
+			"scope": "punctuation.definition.string.end"
 		},
 		{
-			"scope": "string.unquoted",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Unquoted strings, such as in Shell and Batch File"
+			"name": "Unquoted strings, such as in Shell and Batch File",
+			"scope": "string.unquoted"
 		},
 		{
+			"name": "Unquoted YAML string",
 			"scope": "string.unquoted.yaml",
-			"background": "",
-			"foreground": "#F8F8F2",
-			"fontStyle": "",
-			"name": "Unquoted YAML string"
+			"foreground": "#F8F8F2"
 		},
 		{
-			"scope": "string.regexp",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Regular expression literals"
+			"name": "Regular expression literals",
+			"scope": "string.regexp"
 		},
 		{
+			"name": "Elements provided by a base framework should use one of the following scopes. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript",
 			"scope": "support.constant",
-			"background": "",
-			"foreground": "#e1bd7a",
-			"fontStyle": "",
-			"name": "Elements provided by a base framework should use one of the following scopes. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript"
+			"foreground": "#e1bd7a"
 		},
 		{
+			"name": "Elements provided by a base framework. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript",
 			"scope": "support.function",
-			"background": "",
-			"foreground": "#57b6c2",
-			"fontStyle": "",
-			"name": "Elements provided by a base framework. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript"
+			"foreground": "#57b6c2"
 		},
 		{
+			"name": "Library function",
 			"scope": "support.macro",
-			"background": "",
-			"foreground": "#66D9EF",
-			"fontStyle": "",
-			"name": "Library function"
+			"foreground": "#66D9EF"
 		},
 		{
-			"scope": "support.module",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Elements provided by a base framework should use one of the following scopes. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript"
+			"name": "Elements provided by a base framework should use one of the following scopes. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript",
+			"scope": "support.module"
 		},
 		{
+			"name": "While also used for base frameworks, many syntaxes apply these to scopes unrecognized classes and types, effectively scoping all user constructs",
 			"scope": "support.type",
-			"background": "",
 			"foreground": "#66D9EF",
-			"fontStyle": "italic",
-			"name": "While also used for base frameworks, many syntaxes apply these to scopes unrecognized classes and types, effectively scoping all user constructs"
+			"font_style": "italic"
 		},
 		{
+			"name": "While also used for base frameworks, many syntaxes apply these to scopes unrecognized classes and types, effectively scoping all user constructs",
 			"scope": "support.class",
-			"background": "",
 			"foreground": "#e1bd7a",
-			"fontStyle": "italic",
-			"name": "While also used for base frameworks, many syntaxes apply these to scopes unrecognized classes and types, effectively scoping all user constructs"
+			"font_style": "italic"
 		},
 		{
-			"scope": "support.other.variable",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Library variable"
+			"name": "Library variable",
+			"scope": "support.other.variable"
 		},
 		{
-			"scope": "variable.other",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "A generic variable"
+			"name": "A generic variable",
+			"scope": "variable.other"
 		},
 		{
-			"scope": "variable.other.readwrite",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Some languages use the readwrite variant for contrast with the constant variant"
+			"name": "Some languages use the readwrite variant for contrast with the constant variant",
+			"scope": "variable.other.readwrite"
 		},
 		{
-			"scope": "punctuation.definition.variable",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Symbols that are part of the variable name. For example, the dollar symbol in PHP and Shell"
+			"name": "Symbols that are part of the variable name. For example, the dollar symbol in PHP and Shell",
+			"scope": "punctuation.definition.variable"
 		},
 		{
-			"scope": "variable.other.constant",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Immutable variables, often via a const modifier. Depending on the language and semantics, Entity.Name.Constant may be a better choice"
+			"name": "Immutable variables, often via a const modifier. Depending on the language and semantics, Entity.Name.Constant may be a better choice",
+			"scope": "variable.other.constant"
 		},
 		{
+			"name": "Reserved variable names that are specified by the language, such as this, self, super, etc",
 			"scope": "variable.language",
-			"background": "",
 			"foreground": "#fd971f",
-			"fontStyle": "italic",
-			"name": "Reserved variable names that are specified by the language, such as this, self, super, etc"
+			"font_style": "italic"
 		},
 		{
-			"scope": "variable.other.member",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "",
-			"name": "Fields, properties, members and attributes of a class or other data structure"
+			"name": "Fields, properties, members and attributes of a class or other data structure",
+			"scope": "variable.other.member"
 		},
 		{
+			"name": "Function and method names, but only when they are being invoked. When defined, they should use entity.name.function",
 			"scope": "variable.function",
-			"background": "",
-			"foreground": "#57b6c2",
-			"fontStyle": "",
-			"name": "Function and method names, but only when they are being invoked. When defined, they should use entity.name.function"
+			"foreground": "#57b6c2"
 		},
 		{
+			"name": "Function call",
 			"scope": "variable.annotation",
-			"background": "",
-			"foreground": "#66D9EF",
-			"fontStyle": "",
-			"name": "Function call"
+			"foreground": "#66D9EF"
 		},
 		{
-			"foreground": "#F83333",
-			"scope": "message.error"
-		},
-		{
-			"foreground": "#F92672",
+			"name": "JavaScript Dollar",
 			"scope": "variable.other.dollar.only.js",
-			"name": "JavaScript Dollar"
+			"foreground": "#F92672"
 		},
 		{
-			"foreground": "#75715E",
+			"name": "markup hr",
 			"scope": "punctuation.definition.thematic-break",
-			"name": "markup hr"
+			"foreground": "#75715E"
 		},
 		{
-			"foreground": "#F92672",
+			"name": "Annotation Punctuation",
 			"scope": "punctuation.definition.annotation",
-			"name": "Annotation Punctuation"
+			"foreground": "#F92672"
 		},
 		{
-			"foreground": "#be4f46",
+			"name": "Punctuation section embedded variable",
 			"scope": "punctuation.section.embedded",
-			"name": "Punctuation section embedded variable"
+			"foreground": "#be4f46"
 		},
 		{
+			"name": "JSON brackets, colons and commas",
 			"scope": "meta.structure.dictionary.json",
-			"background": "",
-			"foreground": "#abb2bf",
-			"fontStyle": "",
-			"name": "JSON brackets, colons and commas"
+			"foreground": "#abb2bf"
 		},
 		{
+			"name": "JSON constants",
 			"scope": "constant.language.json",
-			"background": "",
-			"foreground": "#db6a73",
-			"fontStyle": "",
-			"name": "JSON constants"
+			"foreground": "#db6a73"
 		},
 		{
+			"name": "JSON dictionary key",
 			"scope": "source.json meta.structure.dictionary.json meta.structure.dictionary.key.json string.quoted.double.json",
-			"background": "",
-			"foreground": "#678cb1",
-			"fontStyle": "",
-			"name": "JSON dictionary key"
+			"foreground": "#678cb1"
 		},
 		{
+			"name": "JSON dictionary value",
 			"scope": "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json",
-			"background": "",
-			"foreground": "#98c379",
-			"fontStyle": "",
-			"name": "JSON dictionary value"
+			"foreground": "#98c379"
 		},
 		{
-			"foreground": "#A6E22E",
+			"name": "Entity name",
 			"scope": "entity.name - (entity.name.filename | entity.name.section | entity.name.tag | entity.name.label)",
-			"name": "Entity name"
+			"foreground": "#A6E22E"
 		},
 		{
+			"name": "Parameters to a function or methods. This may also be used for other parameter-like variables, such as receivers or named return values in Go",
 			"scope": "variable.parameter - (source.c | source.c++ | source.objc | source.objc++)",
-			"background": "",
 			"foreground": "#FD971F",
-			"fontStyle": "italic",
-			"name": "Parameters to a function or methods. This may also be used for other parameter-like variables, such as receivers or named return values in Go"
+			"font_style": "italic"
 		},
 		{
-			"foreground": "#F8F8F8AA",
-			"scope": "text &amp; (punctuation.definition.italic | punctuation.definition.bold | punctuation.definition.raw | punctuation.definition.link | punctuation.definition.metadata | punctuation.definition.image | punctuation.separator.table-cell | punctuation.section.table-header | punctuation.definition.constant)",
-			"name": "markup punctuation"
+			"name": "markup punctuation",
+			"scope": "text & (punctuation.definition.italic | punctuation.definition.bold | punctuation.definition.raw | punctuation.definition.link | punctuation.definition.metadata | punctuation.definition.image | punctuation.separator.table-cell | punctuation.section.table-header | punctuation.definition.constant)",
+			"foreground": "#F8F8F8AA"
 		},
 		{
-			"foreground": "#AE81FFA0",
-			"scope": "constant.numeric.line-number.find-in-files - match"
-		},
-		{
-			"scope": "entity.other.attribute-name.id.css",
-			"background": "",
-			"foreground": "#907dcd",
-			"fontStyle": "bold",
-			"name": ""
-		},
-		{
-			"scope": "entity.other.attribute-name.class.css",
-			"background": "",
-			"foreground": "#4fa472",
-			"fontStyle": "",
-			"name": ""
-		},
-		{
-			"scope": "entity.other.pseudo-class.css",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "bold italic",
-			"name": ""
-		},
-		{
-			"scope": "entity.other.pseudo-element.css",
-			"background": "",
-			"foreground": "",
-			"fontStyle": "italic",
-			"name": ""
-		},
-		{
+			"name": "CSS numeric units like px, em, percentage, etc...",
 			"scope": "keyword.other.unit.css",
-			"background": "",
-			"foreground": "#eb7600",
-			"fontStyle": "",
-			"name": "CSS numeric units like px, em, percentage, etc..."
+			"foreground": "#eb7600"
 		}
 	]
 }
