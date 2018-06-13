@@ -1,627 +1,348 @@
 {
 	"name": "Monnokay",
 	"author": "cixtor",
+	"uuid": "d8b7c755-8a1f-44ad-9379-a2c9632c36f5",
 	"origin": "https://github.com/cixtor/monnokay",
+	"variables": {
+		"blue": "#9ee7fc",
+		"bluest": "#6272a4",
+		"dotted": "#474952",
+		"gray": "#8f9093",
+		"grayish": "#44475a",
+		"green": "#50fa7b",
+		"light": "#f8f8f2",
+		"magenta": "#f07fc4",
+		"night": "#282a35",
+		"orange": "#ffb86c",
+		"purple": "#b694f5",
+		"red": "#ff0000",
+		"yellow": "#f3fa95",
+		"yellowest": "#ffdd33",
+	},
 	"globals": {
-		"active_guide": "#9d550fb0",
-		"background": "#282c34",
-		"bracket_contents_foreground": "#f8f8f2a5",
-		"bracket_contents_options": "underline",
-		"brackets_foreground": "#f8f8f2a5",
-		"brackets_options": "underline",
-		"caret": "#518bff",
-		"find_highlight": "#ffe792",
+		"background": "var(night)",
+		"foreground": "var(light)",
+		"caret": "var(light)",
+		"line_highlight": "var(grayish)",
+		"misspelling": "var(red)",
+		"fold_marker": "var(yellowest)",
+		"minimap_border": "var(bluest)",
+		"accent": "var(blue)",
+		"gutter": "var(night)",
+		"gutter_foreground": "var(gray)",
+		"selection": "var(grayish)",
+		// "selection_foreground": "",
+		"selection_border": "#222218",
+		"selection_border_width": "1",
+		"inactive_selection": "#363948",
+		// "inactive_selection_foreground": "",
+		"selection_corner_style": "round",
+		"selection_corner_radius": "2",
+		"highlight": "#c4c5c2",
+		"find_highlight": "#effb7b",
 		"find_highlight_foreground": "#000000",
-		"foreground": "#abb2bf",
-		"invisibles": "#00617d",
-		"line_highlight": "#374152",
-		"misspelling": "#f92672",
-		"selection": "#3e4451",
-		"selection_border": "#3e4451",
-		"tags_options": "stippled_underline"
+		"guide": "var(dotted)",
+		"active_guide": "var(dotted)",
+		"stack_guide": "var(dotted)",
+		"brackets_options": "underline",
+		"brackets_foreground": "var(light)",
+		"bracket_contents_options": "underline",
+		"bracket_contents_foreground": "var(light)",
+		"tags_options": "stippled_underline",                                                                // hello
+		// "tags_foreground": "",
+		"shadow": "#0f0f0f",
+		"shadow_width": "8",
 	},
 	"rules": [
 		{
-			"name": "String",
-			"scope": "string",
-			"foreground": "#98c379"
+			"scope": "source - comment - string - keyword - punctuation - storage - entity - source.css",
+			"foreground": ["var(green)", "var(purple)"]
+			// "foreground": ["#82f785", "#90bdee"]
 		},
 		{
-			"name": "Comment",
 			"scope": "comment",
-			"foreground": "#5c6370",
-			"font_style": "italic"
+			"font_style": "italic",
+			"foreground": "#6272a4"
 		},
 		{
-			"name": "Single comments",
-			"scope": "comment.line"
+			"scope": "storage.type",
+			"font_style": "italic",
+			"foreground": "var(blue)"
 		},
 		{
-			"name": "Multi-line comments",
-			"scope": "comment.block"
+			"scope": "string.quoted",
+			"foreground": "var(yellow)"
 		},
 		{
-			"name": "Multi-line comments used as documentation, such as Javadoc or PhpDoc",
-			"scope": "comment.block.documentation"
+			"scope": "constant",
+			"foreground": "var(purple)"
 		},
 		{
-			"name": "Symbols that delineate a comment, e.g. // or /*",
-			"scope": "punctuation.definition.comment"
+			"scope": "keyword.other",
+			"foreground": "var(magenta)"
 		},
 		{
-			"name": "Comments with special syntax that denote a section of code",
-			"scope": "meta.toc-list"
+			"scope": "keyword.control",
+			"foreground": "var(magenta)"
 		},
 		{
-			"name": "Diff header",
-			"scope": "meta.diff",
-			"foreground": "#75715E"
-		},
-		{
-			"name": "Diff header",
-			"scope": "meta.diff.header",
-			"foreground": "#75715E"
-		},
-		{
-			"name": "Numeric literal",
-			"scope": "constant.numeric",
-			"foreground": "#e0bc14"
-		},
-		{
-			"name": "Numeric literal for integers",
-			"scope": "constant.numeric.integer"
-		},
-		{
-			"name": "Numeric literal for floating points",
-			"scope": "constant.numeric.float"
-		},
-		{
-			"name": "Numeric literal in octal representation",
-			"scope": "constant.numeric.octal"
-		},
-		{
-			"name": "Numeric literal in hexadecimal representation",
-			"scope": "constant.numeric.hex"
-		},
-		{
-			"name": "Constants that are built into the language, such as booleans and null values",
-			"scope": "constant.language",
-			"foreground": "#db6a73"
-		},
-		{
-			"name": "User-defined constant",
-			"scope": "constant.character",
-			"foreground": "#AE81FF"
-		},
-		{
-			"name": "Character escapes in strings, e.g. \\n and \\x20",
-			"scope": "constant.character.escape",
-			"foreground": "#57b6c2",
-			"font_style": "bold"
-		},
-		{
-			"name": "Formatting placeholders, such as those used for sprintf(), e.g. %s",
-			"scope": "constant.other.placeholder",
-			"font_style": "bold"
-		},
-		{
-			"name": "Other language-specific constant values, such as symbols in Ruby",
-			"scope": "constant.other",
-			"foreground": "#d09965"
-		},
-		{
-			"name": "Class name",
-			"scope": "entity.name.class",
-			"foreground": "#e1bd7a"
-		},
-		{
-			"name": "Struct name",
-			"scope": "entity.name.struct"
-		},
-		{
-			"name": "Enum name",
-			"scope": "entity.name.enum"
-		},
-		{
-			"name": "Union name",
-			"scope": "entity.name.union"
-		},
-		{
-			"name": "Trait name",
-			"scope": "entity.name.trait"
-		},
-		{
-			"name": "Interface name",
-			"scope": "entity.name.interface"
-		},
-		{
-			"name": "Type name",
-			"scope": "entity.name.type",
-			"foreground": "#e1bd7a"
-		},
-		{
-			"name": "Class, interface and trait names listed as an inherited class or implemented interface/trait",
-			"scope": "entity.other.inherited-class",
-			"foreground": "#98c379"
-		},
-		{
-			"name": "Filename",
-			"scope": "entity.name.filename",
-			"foreground": "#E6DB74"
-		},
-		{
-			"name": "Function names included in the symbol list and index",
-			"scope": "entity.name.function",
-			"foreground": "#61afef",
-			"font_style": "bold"
-		},
-		{
-			"name": "Function names included in the symbol list and index",
-			"scope": "entity.name.function.constructor"
-		},
-		{
-			"name": "Function names included in the symbol list and index",
-			"scope": "entity.name.function.destructor"
-		},
-		{
-			"name": "Namespaces, packages and modules use the following scope",
-			"scope": "entity.name.namespace",
-			"foreground": "#e0bc14",
-			"font_style": "bold"
-		},
-		{
-			"name": "Namespaces, packages and modules use the following scope",
-			"scope": "support.other.namespace",
-			"foreground": "#e0bc14"
-		},
-		{
-			"name": "Constants included in the symbol list and index",
-			"scope": "entity.name.constant"
-		},
-		{
-			"name": "Labels for goto-like constructs",
-			"scope": "entity.name.label",
-			"foreground": "#ff0000",
-			"font_style": "bold"
-		},
-		{
-			"name": "Heading names in markup languages, such as Markdown and Textile",
-			"scope": "entity.name.section"
-		},
-		{
-			"name": "HTML and XML tags should use the following scope",
-			"scope": "entity.name.tag",
-			"foreground": "#F92672"
-		},
-		{
-			"name": "HTML, CSS and XML use the following for tag attribute names",
-			"scope": "entity.other.attribute-name",
-			"foreground": "#A6E22E"
-		},
-		{
-			"name": "Elements that are illegal in a specific context",
-			"scope": "invalid.illegal"
-		},
-		{
-			"name": "Deprecated elements",
-			"scope": "invalid.deprecated",
-			"background": "#AE81FF",
-			"foreground": "#F8F8F0"
-		},
-		{
-			"name": "Control keywords examples include if, try, end and while",
-			"scope": "keyword.control"
-		},
-		{
-			"name": "Some syntaxes prefer to mark if and else with the conditional variant",
-			"scope": "keyword.control.conditional"
-		},
-		{
-			"name": "The import variant is often used in appropriate situations",
-			"scope": "keyword.control.import"
-		},
-		{
-			"name": "Keywords that contain punctuation, such as the @ symbol in CSS",
-			"scope": "punctuation.definition.keyword"
-		},
-		{
-			"name": "Keyword",
-			"scope": "keyword - (source.c keyword.operator | source.c++ keyword.operator | source.objc keyword.operator | source.objc++ keyword.operator), keyword.operator.word",
-			"foreground": "#c678dd"
-		},
-		{
-			"name": "Symbols for general operations",
 			"scope": "keyword.operator",
-			"foreground": "#abb2bf"
+			"foreground": "var(magenta)"
 		},
 		{
-			"name": "Symbols for assignment operations",
-			"scope": "keyword.operator.assignment",
-			"foreground": "#abb2bf"
+			"scope": "constant.character.escape",
+			"foreground": "#ff79c6"
+		},
+		// {
+		// 	"scope": "meta.function.declaration",
+		// 	"foreground": "var(blue)",
+		// },
+		{
+			"scope": "support.class",
+			"foreground": "var(blue)"
 		},
 		{
-			"name": "Symbols for arithmetic operations",
-			"scope": "keyword.operator.arithmetic"
+			"scope": "meta.function.declaration storage.type.function",
+			"font_style": "italic",
+			"foreground": "var(blue)"
 		},
 		{
-			"name": "Symbols for bitwise operations",
-			"scope": "keyword.operator.bitwise"
+			"scope": "entity.name.function",
+			"foreground": "#82f785"
 		},
 		{
-			"name": "Symbols for logical operations",
-			"scope": "keyword.operator.logical",
-			"foreground": "#abb2bf"
+			"scope": "support.function",
+			"foreground": "var(blue)"
 		},
 		{
-			"name": "Symbols for logical operations",
-			"scope": "keyword.operator.comparison",
-			"foreground": "#abb2bf"
+			"scope": "support.function.builtin",
+			"foreground": "var(blue)"
 		},
 		{
-			"name": "When the operator is a word, such as and, or or not",
-			"scope": "keyword.operator.word"
+			"scope": "meta.function-call.method variable.function",
+			"foreground": "var(blue)"
 		},
 		{
-			"name": "All remaining non-operator keywords",
-			"scope": "keyword.other"
+			"scope": "support.constant.prototype",
+			"foreground": "#90bdee"
 		},
 		{
-			"name": "PhpDoc keywords",
-			"scope": "keyword.other.phpdoc",
-			"foreground": "#7f7e80",
-			"font_style": "bold italic"
+			"scope": "variable.parameter.function",
+			"font_style": "italic",
+			"foreground": "#f1b771"
+		},
+		// HTML
+		{
+			"scope": "entity.name.tag",
+			"foreground": "#ff79c6"
+		},
+		// HTML/CSS
+		{
+			"scope": "entity.other.attribute-name",
+			"foreground": "var(green)"
 		},
 		{
-			"name": "Section headings for content, Markdown and Textile",
-			"scope": "markup.heading",
-			"foreground": "#ff9200",
+			"scope": "entity.other.attribute-name.id",
+			"foreground": "#f1a864"
+		},
+		// CSS
+		{
+			"name": "css property name",
+			"scope": "support.type.property-name.css",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "css ::after and ::before",
+			"scope": "entity.other.pseudo-element.css, entity.other.pseudo-class.css",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "css constant values: absolute, relative, solid, etc",
+			"scope": "support.constant.property-value.css",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "css w3c values: transparent, etc",
+			"scope": "support.constant.color.w3c-special-color-keyword.css",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "css measurement units: px, em, percentage, etc",
+			"scope": "keyword.other.unit.css",
+			"foreground": "var(magenta)"
+		},
+		{
+			"name": "css operators",
+			"scope": "punctuation.separator.combinator.css",
+			"foreground": "var(magenta)"
+		},
+		{
+			"name": "css media query: min-width, max-width, etc",
+			"scope": "support.type.property-name.media.css",
+			"foreground": "var(blue)"
+		},
+		// Markdown
+		{
+			"name": "markdown h1, h2, h3, h4, h5, h6",
+			"scope": "text.html.markdown markup.heading",
+			"foreground": "var(blue)",
 			"font_style": "bold"
 		},
 		{
-			"name": "markup h1",
-			"scope": "markup.heading.1",
-			"foreground": "#fd9855"
-		},
-		{
-			"name": "markup h2",
-			"scope": "markup.heading.2",
-			"foreground": "#fc8032"
-		},
-		{
-			"name": "markup h3",
-			"scope": "markup.heading.3",
-			"foreground": "#fc5f32"
-		},
-		{
-			"name": "markup h4",
-			"scope": "markup.heading.4",
-			"foreground": "#fb4035"
-		},
-		{
-			"name": "markup h5",
-			"scope": "markup.heading.5",
-			"foreground": "#9e2442"
-		},
-		{
-			"name": "markup h6",
-			"scope": "markup.heading.6",
-			"foreground": "#360e2a"
-		},
-		{
-			"name": "Numbered list",
-			"scope": "markup.list.numbered"
-		},
-		{
-			"name": "Markup bullets",
-			"scope": "markup.list.numbered.bullet",
-			"foreground": "#ae81ff",
-			"font_style": "bold"
-		},
-		{
-			"name": "Unnumbered list",
-			"scope": "markup.list.unnumbered"
-		},
-		{
-			"name": "markup bullets",
-			"scope": "markup.list.unnumbered.bullet",
-			"foreground": "#ae81ff",
-			"font_style": "bold"
-		},
-		{
-			"name": "Basic bold text styling",
-			"scope": "markup.bold",
-			"foreground": "#c6d1e3",
-			"font_style": "bold"
-		},
-		{
-			"name": "Basic italic text styling",
+			"name": "markdown italic",
 			"scope": "markup.italic",
-			"foreground": "#707780",
+			"foreground": "var(yellow)",
 			"font_style": "italic"
 		},
 		{
-			"name": "markup bold/italic",
-			"scope": "markup.italic markup.bold | markup.bold markup.italic",
-			"font_style": "bold italic"
+			"name": "markdown bold",
+			"scope": "markup.bold",
+			"foreground": "var(orange)",
+			"font_style": "bold"
 		},
 		{
-			"name": "Basic underline text styling",
-			"scope": "markup.underline"
+			"name": "markdown strikethrough",
+			"scope": "markup.strikethrough.markdown-gfm",
+			"font_style": "italic",
+			"foreground": "var(purple)"
 		},
 		{
-			"name": "Inserted content, such as with diff output",
+			"name": "markdown line separator",
+			"scope": "meta.separator.thematic-break.markdown",
+			"foreground": "var(gray)",
+		},
+		{
+			"name": "markdown url name",
+			"scope": "meta.link.inline.description.markdown, meta.image.inline.description.markdown, punctuation.definition.link.begin.markdown, punctuation.definition.link.end.markdown, punctuation.definition.image.begin.markdown, punctuation.definition.image.end.markdown, meta.image.reference.description.markdown",
+			"foreground": "var(yellow)",
+		},
+		{
+			"name": "markdown url address",
+			"scope": "markup.underline.link.markdown, markup.underline.link.image.markdown, punctuation.definition.metadata.begin.markdown, punctuation.definition.metadata.end.markdown",
+			"foreground": "var(blue)",
+		},
+		{
+			"name": "markdown url optional title",
+			"scope": "string.other.link.description.title.markdown",
+			"foreground": "var(bluest)",
+		},
+		{
+			"name": "markdown reference address",
+			"scope": "entity.name.reference.link.markdown, constant.other.reference.link.markdown, punctuation.definition.constant.begin.markdown, punctuation.definition.constant.end.markdown",
+			"foreground": "var(purple)",
+		},
+		{
+			"name": "markdown blockquote",
+			"scope": "markup.quote",
+			"font_style": "italic",
+			"foreground": "var(bluest)"
+		},
+		{
+			"name": "markdown blockquote punctuation",
+			"scope": "punctuation.definition.blockquote.markdown",
+			"font_style": "italic",
+			"background": "var(bluest)",
+			"foreground": "var(bluest)"
+		},
+		{
+			"name": "markdown ordered and unordered list",
+			"scope": "markup.list.numbered.bullet.markdown, markup.list.unnumbered.bullet.markdown, punctuation.definition.list_item.markdown",
+			"foreground": "var(magenta)"
+		},
+		{
+			"name": "markdown inline code",
+			"scope": "markup.raw.inline.markdown",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "markdown raw block punctuation",
+			"scope": "punctuation.definition.raw.code-fence.begin.markdown, punctuation.definition.raw.code-fence.end.markdown",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "markdown raw block",
+			"scope": "markup.raw.block",
+			"foreground": "var(gray)"
+		},
+		{
+			"name": "markup code-fence",
+			"scope": "markup.raw.code-fence.markdown-gfm",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "markdown table heading",
+			"scope": "meta.table.header - punctuation",
+			"font_style": "bold",
+			"foreground": "var(orange)"
+		},
+		{
+			"name": "markdown table cell separator",
+			"scope": "punctuation.section.table-header.markdown, punctuation.separator.table-cell.markdown, punctuation.definition.table-cell-alignment.markdown",
+			"font_style": "bold",
+			"foreground": "var(gray)"
+		},
+		// Go
+		{
+			"name": "go struct name",
+			"scope": "entity.name.type",
+			"foreground": "#90bdee"
+		},
+		// Diff - Patch
+		{
+			"name": "diff source",
+			"scope": "source.diff",
+			"foreground": "var(gray)"
+		},
+		{
+			"name": "diff header",
+			"scope": "meta.diff, meta.diff.header",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "diff deleted",
+			"scope": "markup.deleted",
+			"foreground": "var(magenta)"
+		},
+		{
+			"name": "diff inserted",
 			"scope": "markup.inserted",
-			"foreground": "#a6e22e"
+			"foreground": "var(green)"
 		},
 		{
-			"name": "Changed content, such as with diff output",
+			"name": "diff changed",
 			"scope": "markup.changed",
 			"foreground": "#e6db74"
 		},
+		// JSON
 		{
-			"name": "Deleted content, such as with diff output",
-			"scope": "markup.deleted",
-			"foreground": "#f92672"
+			"name": "json string",
+			"scope": "string.quoted.double.json",
+			"foreground": "var(yellow)"
 		},
 		{
-			"name": "Links",
-			"scope": "markup.underline.link",
-			"foreground": "#007582"
+			"name": "json attribute level 1",
+			"scope": "source.json meta meta.structure.dictionary.key string.quoted.double.json",
+			"foreground": "var(blue)"
 		},
 		{
-			"name": "Links",
-			"scope": "meta.link.inline.markdown",
-			"foreground": "#00adc0"
+			"name": "json attribute level 2",
+			"scope": "source.json meta meta meta meta.structure.dictionary.key string.quoted.double.json",
+			"foreground": "var(green)"
 		},
 		{
-			"name": "Links",
-			"scope": "meta.link.inline.description.markdown",
-			"foreground": "#00adc0",
-			"font_style": "italic"
+			"name": "json attribute level 3",
+			"scope": "source.json meta meta meta meta meta meta.structure.dictionary.key string.quoted.double.json",
+			"foreground": "var(purple)"
 		},
 		{
-			"name": "Links",
-			"scope": "meta.image.inline.markdown",
-			"foreground": "#00adc0"
+			"name": "json attribute level 4",
+			"scope": "source.json meta meta meta meta meta meta meta meta.structure.dictionary.key string.quoted.double.json",
+			"foreground": "var(magenta)"
 		},
 		{
-			"name": "Links",
-			"scope": "meta.image.inline.description.markdown",
-			"foreground": "#00adc0",
-			"font_style": "italic"
+			"name": "json attribute level 5",
+			"scope": "source.json meta meta meta meta meta meta meta meta meta meta.structure.dictionary.key string.quoted.double.json",
+			"foreground": "var(orange)"
 		},
-		{
-			"name": "Blockquotes and other quote styles",
-			"scope": "markup.quote"
-		},
-		{
-			"name": "Literal quoting, often used for code",
-			"scope": "markup.raw",
-			"background": "#F8F8F818"
-		},
-		{
-			"name": "Inline literal quoting, often used for code",
-			"scope": "markup.raw.inline"
-		},
-		{
-			"name": "Block literal quoting, often used for code",
-			"scope": "markup.raw.block"
-		},
-		{
-			"name": "markup punctuation",
-			"scope": "markup.raw punctuation.definition.raw",
-			"foreground": "#F8F8F8AA"
-		},
-		{
-			"name": "Other markup, including constructs such as footnotes and tables",
-			"scope": "markup.other"
-		},
-		{
-			"name": "markup blockquote",
-			"scope": "markup.quote punctuation.definition.blockquote",
-			"foreground": "#75715E"
-		},
-		{
-			"name": "Separators such as commas and colons",
-			"scope": "punctuation.separator"
-		},
-		{
-			"name": "Semicolons or other statement terminators",
-			"scope": "punctuation.terminator"
-		},
-		{
-			"name": "Line-continuation characters, such as in Python and R",
-			"scope": "punctuation.separator.continuation"
-		},
-		{
-			"name": "Member access, scope resolution, or similar constructs including the dot symbol, single-hyphen arrow and double-colon symbol",
-			"scope": "punctuation.accessor"
-		},
-		{
-			"name": "Storage",
-			"scope": "storage",
-			"foreground": "#F92672"
-		},
-		{
-			"name": "Types and definition/declaration keywords should use the following scope. Examples include int, bool, char, func, function, class and def",
-			"scope": "storage.type",
-			"foreground": "#c678dd",
-			"font_style": "italic"
-		},
-		{
-			"name": "Keywords that affect the storage of a variable, function or data structure should use the following scope. Examples include static, inline, const, public and private",
-			"scope": "storage.modifier",
-			"foreground": "#ff0071",
-			"font_style": "italic"
-		},
-		{
-			"name": "Basic strings between single quotes",
-			"scope": "string.quoted.single"
-		},
-		{
-			"name": "Basic strings between double quotes",
-			"scope": "string.quoted.double"
-		},
-		{
-			"name": "Basic strings between triple quotes",
-			"scope": "string.quoted.triple"
-		},
-		{
-			"name": "Strings that used unconventional quotes, such as lower-than and greater-than with C imports",
-			"scope": "string.quoted.other"
-		},
-		{
-			"name": "Punctuation at the beginning of strings",
-			"scope": "punctuation.definition.string.begin"
-		},
-		{
-			"name": "Punctuation at the end of strings",
-			"scope": "punctuation.definition.string.end"
-		},
-		{
-			"name": "Unquoted strings, such as in Shell and Batch File",
-			"scope": "string.unquoted"
-		},
-		{
-			"name": "Unquoted YAML string",
-			"scope": "string.unquoted.yaml",
-			"foreground": "#F8F8F2"
-		},
-		{
-			"name": "Regular expression literals",
-			"scope": "string.regexp"
-		},
-		{
-			"name": "Elements provided by a base framework should use one of the following scopes. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript",
-			"scope": "support.constant",
-			"foreground": "#e1bd7a"
-		},
-		{
-			"name": "Elements provided by a base framework. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript",
-			"scope": "support.function",
-			"foreground": "#57b6c2"
-		},
-		{
-			"name": "Library function",
-			"scope": "support.macro",
-			"foreground": "#66D9EF"
-		},
-		{
-			"name": "Elements provided by a base framework should use one of the following scopes. Examples include Cocoa within Objective-C, or the browser/Node within JavaScript",
-			"scope": "support.module"
-		},
-		{
-			"name": "While also used for base frameworks, many syntaxes apply these to scopes unrecognized classes and types, effectively scoping all user constructs",
-			"scope": "support.type",
-			"foreground": "#66D9EF",
-			"font_style": "italic"
-		},
-		{
-			"name": "While also used for base frameworks, many syntaxes apply these to scopes unrecognized classes and types, effectively scoping all user constructs",
-			"scope": "support.class",
-			"foreground": "#e1bd7a",
-			"font_style": "italic"
-		},
-		{
-			"name": "Library variable",
-			"scope": "support.other.variable"
-		},
-		{
-			"name": "A generic variable",
-			"scope": "variable.other"
-		},
-		{
-			"name": "Some languages use the readwrite variant for contrast with the constant variant",
-			"scope": "variable.other.readwrite"
-		},
-		{
-			"name": "Symbols that are part of the variable name. For example, the dollar symbol in PHP and Shell",
-			"scope": "punctuation.definition.variable"
-		},
-		{
-			"name": "Immutable variables, often via a const modifier. Depending on the language and semantics, Entity.Name.Constant may be a better choice",
-			"scope": "variable.other.constant"
-		},
-		{
-			"name": "Reserved variable names that are specified by the language, such as this, self, super, etc",
-			"scope": "variable.language",
-			"foreground": "#fd971f",
-			"font_style": "italic"
-		},
-		{
-			"name": "Fields, properties, members and attributes of a class or other data structure",
-			"scope": "variable.other.member"
-		},
-		{
-			"name": "Function and method names, but only when they are being invoked. When defined, they should use entity.name.function",
-			"scope": "variable.function",
-			"foreground": "#57b6c2"
-		},
-		{
-			"name": "Function call",
-			"scope": "variable.annotation",
-			"foreground": "#66D9EF"
-		},
-		{
-			"name": "JavaScript Dollar",
-			"scope": "variable.other.dollar.only.js",
-			"foreground": "#F92672"
-		},
-		{
-			"name": "markup hr",
-			"scope": "punctuation.definition.thematic-break",
-			"foreground": "#75715E"
-		},
-		{
-			"name": "Annotation Punctuation",
-			"scope": "punctuation.definition.annotation",
-			"foreground": "#F92672"
-		},
-		{
-			"name": "Punctuation section embedded variable",
-			"scope": "punctuation.section.embedded",
-			"foreground": "#be4f46"
-		},
-		{
-			"name": "JSON brackets, colons and commas",
-			"scope": "meta.structure.dictionary.json",
-			"foreground": "#abb2bf"
-		},
-		{
-			"name": "JSON constants",
-			"scope": "constant.language.json",
-			"foreground": "#db6a73"
-		},
-		{
-			"name": "JSON dictionary key",
-			"scope": "source.json meta.structure.dictionary.json meta.structure.dictionary.key.json string.quoted.double.json",
-			"foreground": "#678cb1"
-		},
-		{
-			"name": "JSON dictionary value",
-			"scope": "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json string.quoted.double.json",
-			"foreground": "#98c379"
-		},
-		{
-			"name": "Entity name",
-			"scope": "entity.name - (entity.name.filename | entity.name.section | entity.name.tag | entity.name.label)",
-			"foreground": "#A6E22E"
-		},
-		{
-			"name": "Parameters to a function or methods. This may also be used for other parameter-like variables, such as receivers or named return values in Go",
-			"scope": "variable.parameter - (source.c | source.c++ | source.objc | source.objc++)",
-			"foreground": "#FD971F",
-			"font_style": "italic"
-		},
-		{
-			"name": "markup punctuation",
-			"scope": "text & (punctuation.definition.italic | punctuation.definition.bold | punctuation.definition.raw | punctuation.definition.link | punctuation.definition.metadata | punctuation.definition.image | punctuation.separator.table-cell | punctuation.section.table-header | punctuation.definition.constant)",
-			"foreground": "#F8F8F8AA"
-		},
-		{
-			"name": "CSS numeric units like px, em, percentage, etc...",
-			"scope": "keyword.other.unit.css",
-			"foreground": "#eb7600"
-		}
 	]
 }
