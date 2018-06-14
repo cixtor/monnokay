@@ -5,7 +5,7 @@
 	"origin": "https://github.com/cixtor/monnokay",
 	"variables": {
 		"blue": "#9ee7fc",
-		"bluest": "#6272a4",
+		"bluest": "#6172a4",
 		"dotted": "#474952",
 		"gray": "#8f9093",
 		"grayish": "#44475a",
@@ -62,7 +62,7 @@
 		{
 			"scope": "comment",
 			"font_style": "italic",
-			"foreground": "#6272a4"
+			"foreground": "var(bluest)"
 		},
 		{
 			"scope": "storage.type",
@@ -107,8 +107,9 @@
 			"foreground": "var(blue)"
 		},
 		{
+			"name": "function definition",
 			"scope": "entity.name.function",
-			"foreground": "#82f785"
+			"foreground": "var(green)"
 		},
 		{
 			"scope": "support.function",
@@ -134,7 +135,7 @@
 		// HTML
 		{
 			"scope": "entity.name.tag",
-			"foreground": "#ff79c6"
+			"foreground": "var(magenta)"
 		},
 		// HTML/CSS
 		{
