@@ -358,5 +358,26 @@
 			"scope": "source.json meta meta meta meta meta meta meta meta meta meta.structure.dictionary.key string.quoted.double.json",
 			"foreground": "var(orange)"
 		},
+		// INI
+		{
+			"name": "source.ini keyword.name.ini",
+			"scope": "source.ini keyword.name.ini",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "source.ini meta.value.ini",
+			"scope": "source.ini meta.value.ini",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "source.ini punctuation.definition.equals.ini",
+			"scope": "source.ini punctuation.definition.equals.ini",
+			"foreground": "var(orange)"
+		},
+		{
+			"name": "source.ini punctuation.definition.quote.ini",
+			"scope": "source.ini punctuation.definition.quote.ini",
+			"foreground": "var(orange)"
+		},
 	]
 }
