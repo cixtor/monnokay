@@ -4,8 +4,10 @@
 	"uuid": "b266f34e-4372-4f51-80b0-4aa1ca337ed0",
 	"origin": "https://github.com/cixtor/monnokay",
 	"variables": {
+		"aqua": "#26b6fc",
 		"blue": "#228EC3",
 		"bluest": "#6272a4",
+		"crystal": "#4dc7a6",
 		"dotted": "#ddd",
 		"gray": "#8f9093",
 		"grayish": "#eeeeee",
@@ -100,6 +102,18 @@
 		{
 			"scope": "support.class",
 			"foreground": "var(blue)"
+		},
+		{
+			"scope": "entity.name.class.php",
+			"foreground": "var(aqua)"
+		},
+		{
+			"scope": "storage.modifier.php, storage.modifier.extends.php",
+			"foreground": "var(magenta)"
+		},
+		{
+			"scope": "entity.other.inherited-class.php",
+			"foreground": "var(crystal)"
 		},
 		{
 			"scope": "meta.function.declaration storage.type.function",
@@ -284,8 +298,8 @@
 		// Go
 		{
 			"name": "go struct name",
-			"scope": "entity.name.type",
-			"foreground": "#90bdee"
+			"scope": "entity.name.struct.go",
+			"foreground": "var(green)"
 		},
 		// Diff - Patch
 		{
