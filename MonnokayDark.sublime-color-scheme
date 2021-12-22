@@ -380,5 +380,58 @@
 			"scope": "source.ini punctuation.definition.quote.ini",
 			"foreground": "var(yellowest)"
 		},
+		// HTTP
+		{
+			"name": "source.http",
+			"scope": "source.http",
+			"foreground": "var(light)"
+		},
+		{
+			"name": "source.http method.http",
+			"scope": "source.http method.http",
+			"font_style": "bold",
+			"foreground": "var(magenta)"
+		},
+		{
+			"name": "source.http filepath.http",
+			"scope": "source.http filepath.http",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "source.http protocol.http",
+			"scope": "source.http protocol.http",
+			"font_style": "italic",
+			"foreground": "var(gray)"
+		},
+		{
+			"name": "source.http header.name.http",
+			"scope": "source.http header.name.http",
+			"foreground": "var(orange)"
+		},
+		{
+			"name": "source.http header.value.http",
+			"scope": "source.http header.value.http",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "source.http data.http",
+			"scope": "source.http data.http",
+			"foreground": "var(light)"
+		},
+		{
+			"name": "source.http transformer.functionname.http",
+			"scope": "source.http transformer.functionname.http",
+			"foreground": "var(orange)"
+		},
+		{
+			"name": "source.http transformer.variabletype.http",
+			"scope": "source.http transformer.variabletype.http",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "source.http transformer.expression.http",
+			"scope": "source.http transformer.expression.http",
+			"foreground": "var(red)"
+		},
 	]
 }
