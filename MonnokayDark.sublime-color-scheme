@@ -433,5 +433,71 @@
 			"scope": "source.http transformer.expression.http",
 			"foreground": "var(red)"
 		},
+		// nginx
+		{
+			"name": "source.nginx string.regexp.nginx",
+			"scope": "source.nginx string.regexp.nginx",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.nginx",
+			"scope": "source.nginx keyword.directive.module.http.nginx",
+			"foreground": "var(magenta)",
+		},
+		{
+			"name": "source.nginx meta.context.location.nginx keyword.directive.module.http.nginx",
+			"scope": "source.nginx meta.context.location.nginx keyword.directive.module.http.nginx",
+			"foreground": "var(crystal)",
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.index.nginx",
+			"scope": "source.nginx keyword.directive.module.http.index.nginx",
+			"foreground": "var(magenta)",
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.gzip.nginx",
+			"scope": "source.nginx keyword.directive.module.http.gzip.nginx",
+			"foreground": "var(magenta)",
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.ssl.nginx",
+			"scope": "source.nginx keyword.directive.module.http.ssl.nginx",
+			"foreground": "var(magenta)",
+		},
+		{
+			"name": "source.nginx keyword.directive.nginx",
+			"scope": "source.nginx keyword.directive.nginx",
+			"foreground": "var(red)",
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.log.nginx",
+			"scope": "source.nginx keyword.directive.module.http.log.nginx",
+			"foreground": "var(crystal)",
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.access.nginx",
+			"scope": "source.nginx keyword.directive.module.http.access.nginx",
+			"foreground": "var(crystal)",
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.realip.nginx",
+			"scope": "source.nginx keyword.directive.module.http.realip.nginx",
+			"foreground": "var(crystal)",
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.fastcgi.nginx",
+			"scope": "source.nginx keyword.directive.module.http.fastcgi.nginx",
+			"foreground": "var(crystal)",
+		},
+		{
+			"name": "source.nginx keyword.directive.module.http.headers.nginx",
+			"scope": "source.nginx keyword.directive.module.http.headers.nginx",
+			"foreground": "var(orange)",
+		},
+		{
+			"name": "source.nginx support.function.module.http.rewrite.nginx",
+			"scope": "source.nginx support.function.module.http.rewrite.nginx",
+			"foreground": "var(red)",
+		},
 	]
 }
