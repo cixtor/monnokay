@@ -433,6 +433,44 @@
 			"scope": "source.http transformer.expression.http",
 			"foreground": "var(red)"
 		},
+		// EML
+		{
+			"name": "source.eml",
+			"scope": "source.eml",
+			"foreground": "var(light)"
+		},
+		{
+			"name": "source.eml version.eml",
+			"scope": "source.eml version.eml",
+			"font_style": "bold",
+			"foreground": "var(magenta)"
+		},
+		{
+			"name": "source.eml boundary.eml",
+			"scope": "source.eml boundary.eml",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "source.eml email.eml",
+			"scope": "source.eml email.eml",
+			"font_style": "italic",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "source.eml header.name.eml",
+			"scope": "source.eml header.name.eml",
+			"foreground": "var(orange)"
+		},
+		{
+			"name": "source.eml header.value.eml",
+			"scope": "source.eml header.value.eml",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "source.eml data.eml",
+			"scope": "source.eml data.eml",
+			"foreground": "var(light)"
+		},
 		// nginx
 		{
 			"name": "source.nginx string.regexp.nginx",
