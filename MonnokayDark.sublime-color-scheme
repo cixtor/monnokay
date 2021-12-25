@@ -471,6 +471,68 @@
 			"scope": "source.eml data.eml",
 			"foreground": "var(light)"
 		},
+		// Transactions (TxnsACC, TxnsCVC, TxnsINV)
+		{
+			"name": "source.csv",
+			"scope": "source.csv",
+			"foreground": "var(gray)"
+		},
+		{
+			"name": "source.csv header.txn",
+			"scope": "source.csv header.txn",
+			"font_style": "bold",
+			"foreground": "var(light)"
+		},
+		{
+			"name": "source.csv date.txn",
+			"scope": "source.csv date.txn",
+			"foreground": "var(orange)"
+		},
+		{
+			"name": "source.csv refnum.txn",
+			"scope": "source.csv refnum.txn",
+			"foreground": "var(bluest)"
+		},
+		{
+			"name": "source.csv payee.txn",
+			"scope": "source.csv payee.txn",
+			"foreground": "var(aqua)"
+		},
+		{
+			"name": "source.csv category.txn",
+			"scope": "source.csv category.txn",
+			"foreground": "var(magenta)"
+		},
+		{
+			"name": "source.csv note.txn",
+			"scope": "source.csv note.txn",
+			"foreground": "var(light)"
+		},
+		{
+			"name": "source.csv neutral.number.txn",
+			"scope": "source.csv neutral.number.txn",
+			"foreground": "var(light)"
+		},
+		{
+			"name": "source.csv positive.number.txn",
+			"scope": "source.csv positive.number.txn",
+			"foreground": "var(green)"
+		},
+		{
+			"name": "source.csv negative.number.txn",
+			"scope": "source.csv negative.number.txn",
+			"foreground": "var(red)"
+		},
+		{
+			"name": "source.csv visible.number.txn",
+			"scope": "source.csv visible.number.txn",
+			"foreground": "var(aqua)"
+		},
+		{
+			"name": "source.csv balance.number.txn",
+			"scope": "source.csv balance.number.txn",
+			"foreground": "var(purple)"
+		},
 		// nginx
 		{
 			"name": "source.nginx string.regexp.nginx",
